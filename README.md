@@ -28,8 +28,6 @@ Questo progetto combina **HierarchicalDet** con **MedSAM** per realizzare un sis
    conda env create -f env.yml
    ```
 
-   *(Assicurati che `requirements.txt` contenga tutti i pacchetti necessari come PyTorch, torchvision, OpenCV, detectron2, ecc.)*
-
 ---
 
 ## 🚀 Esecuzione della Demo
@@ -40,8 +38,6 @@ Dopo aver configurato l’ambiente e i file di configurazione, puoi eseguire la 
 python HierarchicalDet_MedSAM.py   --config-file C:/Users/Admin/Desktop/VA_project/HierarchicalDet/configs/diffdet.custom.swinbase.nonpretrain.yaml   --input C:/Users/Admin/Desktop/VA_project/DENTEX/disease/input/*.png   --nclass 3   --opts MODEL.WEIGHTS C:/Users/Admin/Desktop/VA_project/HierarchicalDet/pesi/disease2/model_final.pth
 ```
 
-> 💡 **Suggerimento:** se usi Linux o macOS, sostituisci i percorsi `C:/Users/...` con i tuoi percorsi locali (es. `/home/user/...`).
-
 ---
 
 ## 🧩 Argomenti principali
@@ -51,18 +47,8 @@ python HierarchicalDet_MedSAM.py   --config-file C:/Users/Admin/Desktop/VA_proje
 | `--config-file` | File di configurazione del modello HierarchicalDet |
 | `--input` | Percorso alle immagini di input (supporta wildcard `*.png`) |
 | `--nclass` | Numero di classi nel dataset |
-| `--opts` | Opzioni aggiuntive (es. pesi del modello, parametri custom) |
+| `--opts` | Opzioni aggiuntive (pesi del modello HierarchicalDet) |
 
----
-
-## 🖼️ Output
-
-L’output della demo include:
-- **Maschere di segmentazione** per ogni immagine di input  
-- **Bounding boxes e label di classe**  
-- **File di log e visualizzazioni** salvati nella directory di output specificata nel file di configurazione  
-
----
 
 ## ⚙️ Requisiti hardware consigliati
 
@@ -74,22 +60,6 @@ L’output della demo include:
 ---
 
 ## 📚 Riferimenti
-
-- [Detectron2](https://github.com/facebookresearch/detectron2)
 - [MedSAM](https://github.com/bowang-lab/MedSAM)
 - [HierarchicalDet](https://github.com/facebookresearch/detectron2/projects)
-
----
-
-## 👨‍💻 Autore
-
-**Tuo Nome**  
-📧 email@example.com  
-📍 Università / Azienda (opzionale)
-
----
-
-## 🧾 Licenza
-
-Questo progetto è distribuito sotto licenza **MIT**.  
-Consulta il file [LICENSE](LICENSE) per ulteriori dettagli.
+- [YOLO](https://github.com/ultralytics/ultralytics)
