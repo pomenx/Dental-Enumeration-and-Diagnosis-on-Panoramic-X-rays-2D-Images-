@@ -1,7 +1,7 @@
 # Dental-Enumeration-and-Diagnosis-on-Panoramic-X-rays-2D-Images
 
-Questo progetto combina **HierarchicalDet** con **MedSAM** per realizzare un sistema avanzato di **rilevamento e segmentazione di immagini mediche**.
-È progettato per analizzare dataset di immagini radiologiche o istologiche e fornire risultati precisi di classificazione e localizzazione di lesioni.
+Questo progetto combina **HierarchicalDet** con **MedSAM** e **YOLO** per realizzare un sistema avanzato di **rilevamento e segmentazione radiografie panoramiche dentali a raggi X**.
+Propone un framework per la rilevazione e segmentazione dei denti, assegando 3 classi al dente rilevato: Quadrante , Enumerazione e Diagnosi.
 
 ---
 
@@ -22,14 +22,11 @@ Assicurati di avere [Conda](https://docs.conda.io/en/latest/) installato. Poi es
 conda env create -f environment.yml
 conda activate HierarchicalSeg
 ```
-
-Questo comando creerà un environment chiamato `HierarchicalSeg` con tutte le dipendenze necessarie.
-
 ---
 
 ## 🚀 Esecuzione della Demo
 
-Dopo aver configurato l’ambiente e i file di configurazione, puoi eseguire la demo con il seguente comando:
+Dopo aver configurato l’ambiente e i file di configurazione, puoi eseguire la demo con il seguente comando scegliendo quale modello utilizzare per la segmentazione, 'medsam' o 'yolo', modificando --seg_model:
 
 ```bash
 python demo.py --config-file configs/diffdet.custom.swinbase.nonpretrain.yaml --input input/test_0.png --nclass 3 --seg_model medsam --opts MODEL.WEIGHTS weights/HierarchicalDet/disease2/model_final.pth   
@@ -43,7 +40,8 @@ python demo.py --config-file configs/diffdet.custom.swinbase.nonpretrain.yaml --
 | --------------- | ----------------------------------------------------------- |
 | `--config-file` | File di configurazione del modello HierarchicalDet          |
 | `--input`       | Percorso alle immagini di input (supporta wildcard `*.png`) |
-| `--nclass`      | Numero di classi nel dataset                                |
+| `--nclass`      | Numero di classi                                            |
+| `--seg_model`   | Modello di segmentazione ('medsam' o 'yolo')                |
 | `--opts`        | Opzioni aggiuntive (pesi del modello HierarchicalDet)       |
 
 ---
