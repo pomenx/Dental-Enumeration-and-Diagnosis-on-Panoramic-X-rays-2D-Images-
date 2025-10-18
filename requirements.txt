@@ -1,0 +1,15 @@
+numpy
+opencv-python
+tqdm
+scikit-image
+fvcore
+cloudpickle
+omegaconf
+fairscale
+pillow==9.5.0
+timm
+matplotlib
+ultralytics
+torch==2.7.1
+torchaudio==2.7.1
+torchvision==0.22.1
