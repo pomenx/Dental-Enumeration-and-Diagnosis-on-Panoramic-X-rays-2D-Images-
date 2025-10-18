@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {"categories_1": [
         {
             "id": 0,
@@ -84,4 +85,92 @@
       "supercategory": "Deep Caries"
     }
   ]
+=======
+{"categories_1": [
+        {
+            "id": 0,
+            "name": "1",
+            "supercategory": "2"
+        },
+        {
+            "id": 1,
+            "name": "2",
+            "supercategory": "1"
+        },
+        {
+            "id": 2,
+            "name": "3",
+            "supercategory": "3"
+        },
+        {
+            "id": 3,
+            "name": "4",
+            "supercategory": "4"
+        }
+    ],
+  "categories_2": [
+    {
+      "id": 0,
+      "name": "1",
+      "supercategory": "1"
+    },
+    {
+      "id": 1,
+      "name": "2",
+      "supercategory": "2"
+    },
+    {
+      "id": 2,
+      "name": "3",
+      "supercategory": "3"
+    },
+    {
+      "id": 3,
+      "name": "4",
+      "supercategory": "4"
+    },
+    {
+      "id": 4,
+      "name": "5",
+      "supercategory": "5"
+    },
+    {
+      "id": 5,
+      "name": "6",
+      "supercategory": "6"
+    },
+    {
+      "id": 6,
+      "name": "7",
+      "supercategory": "7"
+    },
+    {
+      "id": 7,
+      "name": "8",
+      "supercategory": "8"
+    }
+  ],
+  "categories_3": [
+    {
+      "id": 0,
+      "name": "Impacted",
+      "supercategory": "Impacted"
+    },
+    {
+      "id": 1,
+      "name": "Caries",
+      "supercategory": "Caries"
+    },
+    {
+      "id": 2,
+      "name": "Periapical Lesion",
+      "supercategory": "Periapical Lesion"
+    },
+    {
+      "id": 3,
+      "name": "Deep Caries",
+      "supercategory": "Deep Caries"
+    }
+  ]
+>>>>>>> 49ca027d0ce94746b82bf9ab20198f1187435c9e
 }
