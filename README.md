@@ -22,6 +22,11 @@ Assicurati di avere [Conda](https://docs.conda.io/en/latest/) installato. Poi es
 conda env create -f environment.yml
 conda activate HierarchicalSeg
 ```
+Installa i pacchetti mancanti con pip eseguendo:
+
+```bash
+pip install -r requirements.txt --index-url https://download.pytorch.org/whl/cu128                                                                  
+```
 ---
 
 ## 🚀 Esecuzione della Demo
