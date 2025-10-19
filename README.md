@@ -22,8 +22,8 @@ Se non hai Python 3.10, puoi scaricarlo da [python.org/downloads](https://www.py
 ### 2. Clonare la repository
 
 ```bash
-git clone https://github.com/tuo-username/Dental-Enumeration-and-Diagnosis-on-Panoramic-X-rays-2D-Images.git
-cd Dental-Enumeration-and-Diagnosis-on-Panoramic-X-rays-2D-Images
+git clone https://github.com/pomenx/Dental-Enumeration-and-Diagnosis-on-Panoramic-X-rays-2D-Images-.git
+cd Dental-Enumeration-and-Diagnosis-on-Panoramic-X-rays-2D-Images-
 ```
 
 ### 3. Creare e attivare un ambiente virtuale
@@ -31,7 +31,7 @@ cd Dental-Enumeration-and-Diagnosis-on-Panoramic-X-rays-2D-Images
 Si consiglia di creare un ambiente virtuale per evitare conflitti tra pacchetti:
 
 ```bash
-python -m venv HierSeg
+python -m venv HierSeg           # py -3.10 -m venv HierSeg
 source HierSeg/bin/activate      # Su Linux/Mac
 HierSeg\Scripts\activate       # Su Windows
 ```
