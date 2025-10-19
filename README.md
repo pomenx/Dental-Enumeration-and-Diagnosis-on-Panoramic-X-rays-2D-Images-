@@ -1,31 +1,47 @@
 # Dental-Enumeration-and-Diagnosis-on-Panoramic-X-rays-2D-Images
 
-Questo progetto combina **HierarchicalDet** con **MedSAM** e **YOLO** per realizzare un sistema avanzato di **rilevamento e segmentazione radiografie panoramiche dentali a raggi X**.
+Questo progetto combina **HierarchicalDet** con **MedSAM** e **YOLO** per realizzare un sistema avanzato di **rilevamento e segmentazione su radiografie panoramiche dentali a raggi X**.
 Propone un framework per la rilevazione e segmentazione dei denti, assegando 3 classi al dente rilevato: Quadrante , Enumerazione e Diagnosi.
 
 ---
 
 ## 🛠️ Installazione e configurazione
 
-### 1. Clonare la repository
+### 1. Requisiti
+
+Assicurati di avere **Python 3.10** installato sul tuo sistema.  
+Puoi verificarlo con:
+
+```bash
+python --version
+```
+
+Se non hai Python 3.10, puoi scaricarlo da [python.org/downloads](https://www.python.org/downloads/).
+
+
+### 2. Clonare la repository
 
 ```bash
 git clone https://github.com/tuo-username/Dental-Enumeration-and-Diagnosis-on-Panoramic-X-rays-2D-Images.git
 cd Dental-Enumeration-and-Diagnosis-on-Panoramic-X-rays-2D-Images
 ```
 
-### 2. Creare e attivare l'ambiente Conda
+### 3. Creare e attivare un ambiente virtuale
 
-Assicurati di avere [Conda](https://docs.conda.io/en/latest/) installato. Poi esegui:
+Si consiglia di creare un ambiente virtuale per evitare conflitti tra pacchetti:
 
 ```bash
-conda env create -f environment.yml
-conda activate HierarchicalSeg
+python -m venv HierSeg
+source HierSeg/bin/activate      # Su Linux/Mac
+HierSeg\Scripts\activate       # Su Windows
 ```
-Installa i pacchetti mancanti con pip eseguendo:
+
+### 4. Installare le dipendenze
+
+Installa tutte le dipendenze necessarie tramite `pip`:
 
 ```bash
-pip install -r requirements.txt --index-url https://download.pytorch.org/whl/cu128                                                                  
+pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu128
 ```
 ---
 
@@ -34,7 +50,7 @@ pip install -r requirements.txt --index-url https://download.pytorch.org/whl/cu1
 Dopo aver configurato l’ambiente e i file di configurazione, puoi eseguire la demo con il seguente comando scegliendo quale modello utilizzare per la segmentazione, 'medsam' o 'yolo', modificando --seg_model:
 
 ```bash
-python demo.py --config-file configs/diffdet.custom.swinbase.nonpretrain.yaml --input input/test_0.png --nclass 3 --seg_model medsam --opts MODEL.WEIGHTS weights/HierarchicalDet/disease2/model_final.pth   
+python demo.py --config-file configs/diffdet.custom.swinbase.nonpretrain.yaml --input input/test_0.png --nclass 3 --seg_model medsam --opts MODEL.WEIGHTS weights/HierarchicalDet/disease/model_final.pth   
 ```
 
 ---
